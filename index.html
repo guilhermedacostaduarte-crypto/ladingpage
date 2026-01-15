@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Mind Protocol — You Are Not Broken. You Are Hacked.</title>
+  <meta name="description" content="The 30-Day Protocol Book to detox your dopamine, reclaim your focus, and escape the digital cage." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free Mind Protocol — You Are Not Broken. You Are Hacked." />
+  <meta property="og:description" content="A 30-day protocol book to detox dopamine, reclaim focus, and escape the digital cage." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+
+  <!-- Product Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Free Mind Protocol (Book)",
+    "description": "A 30-day protocol book to detox dopamine, reclaim focus, and escape the digital cage.",
+    "brand": { "@type": "Brand", "name": "Free Mind Protocol" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "19.90",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.checkout-ds24.com/product/661595"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is the book enough to beat the addiction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The book is designed as a complete 30-day protocol with daily actions, environment design, and relapse prevention. No extra product is required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you track me or sell my data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We do not sell personal data. This page is intentionally lightweight and privacy-first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a guarantee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You have a 14-day risk-free guarantee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email us at protocolfreemind@gmail.com."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #07090c;
+      --bg2:#0b0f14;
+      --text:#e6edf3;
+      --muted:#9aa7b2;
+      --border: rgba(255,255,255,0.10);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+      --neon:#00ff88;
+      --burnt:#ff6b35;
+      --accent: var(--neon);
+
+      --error:#ff3b3b;
+
+      --radius: 14px;
+      --max: 1120px;
+
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color-scheme: dark;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      background: radial-gradient(1200px 500px at 20% 0%, rgba(0,255,136,0.08), transparent 55%),
+                  radial-gradient(1000px 600px at 90% 20%, rgba(255,107,53,0.06), transparent 55%),
+                  linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      color: var(--text);
+      line-height: 1.55;
+      overflow-x:hidden;
+    }
+
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    .noise{
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.10;
+      mix-blend-mode: overlay;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+      background-size: 220px 220px;
+    }
+
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(10px);
+      background: rgba(7,9,12,0.55);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 0;
+      gap: 12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.92rem;
+    }
+    .brand-badge{
+      width: 32px;height:32px;border-radius:10px;
+      border:1px solid var(--border);
+      background: linear-gradient(135deg, rgba(0,255,136,0.25), rgba(255,107,53,0.14));
+      box-shadow: var(--shadow);
+      display:grid;
+      place-items:center;
+      font-size: 16px;
+    }
+    .nav-actions{
+      display:flex; align-items:center; gap:10px;
+    }
+    .ghost{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor:pointer;
+      font-weight:650;
+      transition: transform .12s ease, border-color .2s ease;
+    }
+    .ghost:hover{transform: translateY(-1px); border-color: rgba(255,255,255,0.18)}
+    .ghost:focus{outline: 2px solid var(--accent); outline-offset:2px}
+
+    a{color:inherit}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-decoration:none;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid rgba(0,0,0,0.2);
+      background: var(--accent);
+      color: #000;
+      transition: transform .14s ease, filter .2s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); filter: brightness(1.03)}
+    .btn:focus{outline: 2px solid var(--accent); outline-offset: 2px}
+
+    .btn-secondary{
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .pulse{animation: pulse 1.7s ease-in-out infinite;}
+    @keyframes pulse{
+      0%,100%{box-shadow: 0 0 0 0 rgba(0,255,136,0.00)}
+      50%{box-shadow: 0 0 35px 0 rgba(0,255,136,0.18)}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}
+    }
+
+    section{padding: 54px 0}
+    .kicker{
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 750;
+      font-size: 0.82rem;
+      margin-bottom: 10px;
+    }
+    h1,h2,h3{ text-transform: uppercase; letter-spacing: 0.06em; }
+    h1{ font-size: clamp(2.1rem, 4.5vw, 3.35rem); line-height: 1.05; }
+    h2{ font-size: clamp(1.6rem, 2.8vw, 2.2rem); line-height: 1.15; margin-bottom: 14px; }
+    .muted{color: var(--muted)}
+
+    .hero{ padding-top: 40px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: center;
+    }
+    .hero-card{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .hero h1{ margin-bottom: 12px; }
+    .hero h1 .accent{ color: var(--accent); }
+    .subheadline{
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+      max-width: 60ch;
+    }
+    .cta-row{ display:flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .microtrust{
+      margin-top: 12px;
+      font-size: 0.95rem;
+      color: rgba(230,237,243,0.78);
+    }
+    .microtrust span{ color: var(--accent); font-weight: 900; }
+
+    .visual{
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(220px 220px at 70% 35%, rgba(0,255,136,0.16), transparent 60%),
+        radial-gradient(260px 260px at 35% 75%, rgba(255,107,53,0.10), transparent 60%),
+        linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position: relative;
+      min-height: 280px;
+      overflow:hidden;
+    }
+    .visual .gridlines{
+      position:absolute; inset:-40px;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 46px 46px;
+      opacity: 0.18;
+      transform: rotate(8deg);
+    }
+    .visual .silhouette{
+      position:absolute; inset:0;
+      display:grid;
+      place-items:center;
+      opacity: 0.92;
+    }
+    .silhouette svg{width: 86%; max-width: 340px; height: auto}
+    .tag{
+      position:absolute;
+      top:14px; left:14px;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.35);
+      font-weight: 800;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+    .tag i{
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(0,255,136,0.25);
+      display:inline-block;
+    }
+
+    .panel{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .problem-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items:start;
+    }
+    .painline{
+      font-size: 1.2rem;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+      margin: 8px 0 6px;
+    }
+    .checklist{
+      list-style:none;
+      margin-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .checklist li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 12px 8px;
+      border-bottom: 1px solid var(--border);
+      cursor:pointer;
+      user-select:none;
+      transition: color .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .checklist li:hover{ background: rgba(255,255,255,0.02); }
+    .checklist .dot{
+      width: 10px;height:10px;border-radius:50%;
+      margin-top: 6px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.06);
+      flex: 0 0 auto;
+    }
+    .checklist li.clicked{ color: var(--error); }
+    .checklist li.clicked .dot{
+      background: var(--error);
+      border-color: rgba(255,0,0,0.35);
+      box-shadow: 0 0 22px rgba(255,59,59,0.18);
+    }
+    .tiny{ font-size: 0.92rem; color: var(--muted); }
+
+    .science-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items:stretch;
+    }
+    .terms{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .pill{
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.22);
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-weight: 780;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: rgba(230,237,243,0.86);
+    }
+
+    .chart{
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.02);
+      padding: 14px;
+      box-shadow: var(--shadow);
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .chart-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      color: rgba(230,237,243,0.88);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .chart-title span{ color: var(--accent); }
+    .bars{
+      display:flex;
+      gap: 10px;
+      align-items:flex-end;
+      height: 140px;
+      padding: 8px 2px;
+      border-top: 1px solid var(--border);
+    }
+    .bar{
+      flex: 1;
+      border-radius: 10px 10px 6px 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+      overflow:hidden;
+    }
+    .bar::before{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,255,136,0.18), rgba(0,0,0,0));
+      opacity: 0.75;
+    }
+    .bar.attn::before{
+      background: linear-gradient(180deg, rgba(0,234,255,0.18), rgba(0,0,0,0));
+    }
+    .bar .label{
+      position:absolute;
+      bottom:8px; left:8px;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(230,237,243,0.72);
+      font-weight: 800;
+    }
+
+    .seesaw{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.02);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+      justify-content:center;
+    }
+    .seesaw-top{
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: rgba(230,237,243,0.86);
+    }
+    .seesaw-top .left{color: var(--accent)}
+    .seesaw-top .right{color: rgba(255,255,255,0.70)}
+    .beam{
+      position:relative;
+      height: 44px;
+      display:grid;
+      place-items:center;
+    }
+    .beam .line{
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(0,255,136,0.18), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.10);
+      transform: rotate(-5deg);
+      transform-origin: center;
+    }
+    .beam .pivot{
+      position:absolute;
+      width: 16px; height: 16px;
+      border-radius: 6px;
+      background: var(--accent);
+      box-shadow: 0 0 26px rgba(0,255,136,0.20);
+    }
+    .beam .hint{
+      position:absolute;
+      bottom: -6px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .card{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      min-height: 170px;
+    }
+    .card .icon{
+      width: 42px; height: 42px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.25);
+      display:grid;
+      place-items:center;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .card h3{ font-size: 1rem; margin-bottom: 8px; }
+    .card p{ color: var(--muted); font-size: 0.98rem; margin: 0; }
+
+    .testimonial{
+      display:grid;
+      gap: 12px;
+      align-items:center;
+      justify-items:center;
+      text-align:center;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.02);
+      box-shadow: var(--shadow);
+    }
+    .avatar{
+      width: 56px; height: 56px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(0,255,136,0.18), rgba(255,107,53,0.12));
+      display:grid;
+      place-items:center;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: rgba(230,237,243,0.86);
+    }
+    .quote{ font-size: 1.1rem; font-weight: 650; letter-spacing: 0.01em; }
+    .byline{
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .offer-wrap{
+      border: 1px solid rgba(0,255,136,0.18);
+      background: rgba(0,255,136,0.04);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      display:grid;
+      gap: 12px;
+    }
+    .offer-head{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .offer-badge{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #000;
+      font-weight: 950;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    .price-stack{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap: 4px;
+    }
+    .was-price{
+      color: rgba(230,237,243,0.70);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+    }
+    .was-price s{
+      text-decoration-thickness: 2px;
+      text-decoration-color: rgba(255,59,59,0.85);
+    }
+    .now-price{
+      font-size: 2.2rem;
+      font-weight: 950;
+      letter-spacing: 0.01em;
+    }
+    .now-price small{
+      font-size: 0.95rem;
+      color: rgba(230,237,243,0.70);
+      font-weight: 800;
+      margin-left: 6px;
+    }
+
+    .offer-features{
+      list-style:none;
+      display:grid;
+      gap: 8px;
+      margin-top: 2px;
+      color: rgba(230,237,243,0.88);
+    }
+    .offer-features li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      color: rgba(230,237,243,0.82);
+    }
+    .offer-features .tick{
+      width: 18px; height: 18px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.25);
+      display:grid;
+      place-items:center;
+      font-size: 12px;
+      color: var(--accent);
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+
+    .guarantee{
+      border: 1px solid rgba(0,255,136,0.18);
+      background: rgba(0,255,136,0.04);
+      border-radius: var(--radius);
+      padding: 14px;
+      color: rgba(230,237,243,0.88);
+    }
+    .guarantee strong{color: var(--accent)}
+
+    .faq{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.02);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .faq-item{ border-bottom: 1px solid var(--border); }
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{
+      width:100%;
+      text-align:left;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      padding: 16px 18px;
+      cursor:pointer;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .faq-q:focus{outline: 2px solid var(--accent); outline-offset: -2px}
+    .faq-a{ display:none; padding: 0 18px 16px; color: var(--muted); }
+    .faq-a.open{display:block}
+    .chev{
+      width: 28px;height: 28px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display:grid;
+      place-items:center;
+      background: rgba(0,0,0,0.25);
+      flex: 0 0 auto;
+    }
+
+    footer{
+      padding: 28px 0 88px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .support{
+      display:inline-flex;
+      gap: 10px;
+      align-items:center;
+    }
+    .support a{
+      text-decoration:none;
+      border-bottom: 1px dashed rgba(255,255,255,0.25);
+    }
+    .support a:focus{outline: 2px solid var(--accent); outline-offset: 2px}
+
+    .sticky-cta{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 60;
+      padding: 12px 14px;
+      background: rgba(7,9,12,0.78);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+    }
+    .sticky-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .sticky-text{
+      display:none;
+      color: rgba(230,237,243,0.85);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      line-height: 1.2;
+    }
+    .sticky-text span{color: var(--accent)}
+    .sticky-btn{ width: 100%; max-width: 360px; }
+    @media (min-width: 920px){
+      .sticky-text{display:block}
+      .sticky-btn{width:auto}
+    }
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr; }
+      .problem-grid{grid-template-columns: 1fr;}
+      .science-grid{grid-template-columns: 1fr;}
+      .cards{grid-template-columns: 1fr 1fr;}
+    }
+    @media (max-width: 520px){
+      .cards{grid-template-columns: 1fr;}
+      .nav-actions .ghost{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Free Mind Protocol Home">
+          <span class="brand-badge">🧠</span>
+          <span>Free Mind Protocol</span>
+        </a>
+
+        <div class="nav-actions">
+          <button class="ghost" id="accentSwitch" type="button" aria-label="Switch accent color">
+            Switch Accent
+          </button>
+          <a class="btn btn-secondary" href="#offer" aria-label="Jump to offer">
+            Offer
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="kicker">A high-tech protocol — inside one book</div>
+            <h1>
+              You Are Not Broken.<br />
+              <span class="accent">You Are Hacked.</span>
+            </h1>
+            <p class="subheadline">
+              The <strong>30-Day Protocol Book</strong> to detox your dopamine, reclaim your focus,
+              and escape the digital cage — with a system you can run even when motivation is zero.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn pulse digistore-checkout" id="ctaHero" href="#" rel="noopener" aria-label="Start the protocol (checkout)">
+                Start the Protocol
+              </a>
+              <a class="btn btn-secondary" href="#science" aria-label="Read the science">
+                See the Science
+              </a>
+            </div>
+
+            <p class="microtrust">
+              <span>14-day risk-free guarantee</span> • Was <strong><s>$59.90</s></strong> → Now <strong>$19.90</strong> • Privacy-first
+            </p>
+          </div>
+
+          <div class="visual" aria-hidden="true">
+            <div class="gridlines"></div>
+            <div class="tag"><i></i> Digital Bunker Mode</div>
+            <div class="silhouette">
+              <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract silhouette breaking cables">
+                <path d="M210 95c24 0 44-20 44-44S234 7 210 7s-44 20-44 44 20 44 44 44Z" fill="rgba(255,255,255,0.12)"/>
+                <path d="M145 405c0-78 28-118 65-118s65 40 65 118" stroke="rgba(255,255,255,0.14)" stroke-width="16" stroke-linecap="round"/>
+                <path d="M128 220c30-54 62-80 82-80s52 26 82 80" stroke="rgba(255,255,255,0.12)" stroke-width="14" stroke-linecap="round"/>
+                <path d="M65 265c40-15 72-18 96-10" stroke="rgba(0,255,136,0.35)" stroke-width="8" stroke-linecap="round"/>
+                <path d="M355 265c-40-15-72-18-96-10" stroke="rgba(255,107,53,0.28)" stroke-width="8" stroke-linecap="round"/>
+                <path d="M40 210c55-10 95 0 125 22" stroke="rgba(255,255,255,0.10)" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 10"/>
+                <path d="M380 210c-55-10-95 0-125 22" stroke="rgba(255,255,255,0.10)" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 10"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section id="problem">
+      <div class="container">
+        <div class="problem-grid">
+          <div class="panel">
+            <div class="kicker">Validation</div>
+            <h2>The Problem: You’re not lazy — you’re being engineered.</h2>
+            <p class="painline">Brain fog. Zero motivation. Anxiety. The endless scroll.</p>
+            <p class="tiny">
+              Your attention is a commodity. Platforms optimize for compulsion.
+              The book gives you a 30-day protocol to reverse the adaptation.
+            </p>
+          </div>
+
+          <div class="panel">
+            <div class="kicker">Interactive</div>
+            <h2>Checklist of Symptoms</h2>
+            <p class="tiny">Tap the ones that hit you. They’ll turn red.</p>
+
+            <ul class="checklist" id="symptoms" aria-label="Checklist of symptoms">
+              <li role="button" tabindex="0"><span class="dot"></span>Can't watch a movie without checking your phone?</li>
+              <li role="button" tabindex="0"><span class="dot"></span>Feeling numb unless something is “new”?</li>
+              <li role="button" tabindex="0"><span class="dot"></span>Morning regret: “I’ll stop tomorrow”?</li>
+              <li role="button" tabindex="0"><span class="dot"></span>Scrolling even when you don’t want to?</li>
+              <li role="button" tabindex="0"><span class="dot"></span>Focus collapses after 5–10 minutes?</li>
+            </ul>
+
+            <p class="tiny" style="margin-top:10px">
+              The protocol works because it’s not motivational. It’s <strong>structural</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCIENCE -->
+    <section id="science">
+      <div class="container">
+        <div class="kicker">Authority</div>
+        <h2>The Science: your brain adapts. The book tells you how to reverse it.</h2>
+        <p class="muted">
+          Built around <strong>Neuroplasticity</strong>, <strong>Dopamine Downregulation</strong>,
+          and the <strong>Coolidge Effect</strong> — explained in plain English with a day-by-day protocol.
+        </p>
+
+        <div class="science-grid" style="margin-top:16px">
+          <div class="seesaw">
+            <div class="seesaw-top">
+              <div class="left">Pleasure</div>
+              <div class="right">Pain</div>
+            </div>
+            <div class="beam" aria-hidden="true">
+              <div class="line"></div>
+              <div class="pivot"></div>
+              <div class="hint">Balance shifts when stimulation spikes</div>
+            </div>
+            <p class="tiny">
+              High stimulation pushes baseline downward. You need more input just to feel normal.
+              The protocol rebuilds baseline by controlling exposure and rebuilding focus.
+            </p>
+
+            <div class="terms" aria-label="Scientific terms">
+              <span class="pill">Neuroplasticity</span>
+              <span class="pill">Downregulation</span>
+              <span class="pill">Reward Prediction</span>
+              <span class="pill">Coolidge Effect</span>
+            </div>
+          </div>
+
+          <div class="chart" aria-label="Minimal charts">
+            <div class="chart-title">
+              <div>Attention <span>↓</span></div>
+              <div>Technology <span>↑</span></div>
+            </div>
+
+            <div class="bars" aria-hidden="true">
+              <div class="bar attn" style="height:85%"><div class="label">2007</div></div>
+              <div class="bar attn" style="height:65%"><div class="label">2012</div></div>
+              <div class="bar attn" style="height:48%"><div class="label">2017</div></div>
+              <div class="bar attn" style="height:34%"><div class="label">2022</div></div>
+              <div class="bar attn" style="height:26%"><div class="label">2026</div></div>
+            </div>
+
+            <p class="tiny">
+              Minimalist visualization to communicate one idea: the world got faster, your brain didn’t.
+              The book is the operational manual.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <a class="btn digistore-checkout" id="ctaMid" href="#" rel="noopener" aria-label="Start the protocol (mid page)">
+            Start the Protocol
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section id="solution">
+      <div class="container">
+        <div class="kicker">Protocol</div>
+        <h2>The Solution: one book, four modules, 30 days.</h2>
+        <p class="muted">
+          The book contains everything you need — a complete system you can execute without extra products.
+        </p>
+
+        <div class="cards" style="margin-top:16px">
+          <div class="card">
+            <div class="icon">🧬</div>
+            <h3>Module 1: Science</h3>
+            <p>Understand the hack. Identify triggers. Build clarity.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🛡️</div>
+            <h3>Module 2: Environment</h3>
+            <p>Protect attention by design. Reduce friction. Eliminate traps.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📆</div>
+            <h3>Module 3: The 30 Days</h3>
+            <p>A daily operating system. Micro-actions, controlled stimulation, recovery.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🔧</div>
+            <h3>Module 4: Reconstruction</h3>
+            <p>Relapse prevention and habit reinforcement under stress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section id="proof">
+      <div class="container">
+        <div class="kicker">Social Proof</div>
+        <h2>Social Proof: diverse lives, same trap — same escape.</h2>
+        <p class="muted">
+          Not “hustle”. Not “vibes”. Just a protocol that rebuilds attention and self-control.
+        </p>
+
+        <div class="testimonial" style="margin-top:16px" aria-live="polite">
+          <div class="avatar" id="avatar">ST</div>
+          <div class="quote" id="quote">“I got my husband back. I’m present again.”</div>
+          <div class="byline" id="byline">Sarah — Texas, USA</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SINGLE OFFER -->
+    <section id="offer">
+      <div class="container">
+        <div class="kicker">Offer</div>
+        <h2>One Option. One Protocol. One Exit.</h2>
+        <p class="muted">
+          If you follow the 30 days, the book is enough. No upgrades. No confusion.
+        </p>
+
+        <div class="offer-wrap" style="margin-top:16px">
+          <div class="offer-head">
+            <div>
+              <div class="offer-badge">Book-Only • Complete Protocol</div>
+              <h3 style="margin-top:10px">Free Mind Protocol (30-Day Protocol Book)</h3>
+            </div>
+
+            <div class="price-stack" aria-label="Price">
+              <div class="was-price">Was <s>$59.90</s></div>
+              <div class="now-price">$19<small>.90 USD</small></div>
+            </div>
+          </div>
+
+          <ul class="offer-features" aria-label="Offer features">
+            <li><span class="tick">✓</span> Complete 30-day day-by-day protocol (no extra product required)</li>
+            <li><span class="tick">✓</span> Environment hardening checklist (devices, apps, triggers)</li>
+            <li><span class="tick">✓</span> Relapse prevention + “panic sequence” you can run instantly</li>
+            <li><span class="tick">✓</span> Clear, structured, privacy-first approach</li>
+          </ul>
+
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+            <a class="btn pulse digistore-checkout" id="ctaOffer" href="#" rel="noopener" aria-label="Checkout (offer)">
+              Start the Protocol
+            </a>
+            <div class="tiny">Instant access • 14-day guarantee • Support: protocolfreemind@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="guarantee" style="margin-top:14px">
+          <strong>14-Day Guarantee:</strong> try it risk-free. If it’s not for you, you get your money back.
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="kicker">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq" style="margin-top:16px">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              Is the book enough to beat the addiction?
+              <span class="chev">+</span>
+            </button>
+            <div class="faq-a">
+              Yes. The book is written as a complete 30-day protocol with daily actions, environment design,
+              and relapse prevention. No extra product is required — the system is inside the book.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              Do you track me or sell my data?
+              <span class="chev">+</span>
+            </button>
+            <div class="faq-a">
+              No. We do not sell personal data. This page is intentionally lightweight and privacy-first.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              Is there a guarantee?
+              <span class="chev">+</span>
+            </button>
+            <div class="faq-a">
+              Yes — 14-day risk-free guarantee.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              How can I contact support?
+              <span class="chev">+</span>
+            </button>
+            <div class="faq-a">
+              Email <a href="mailto:protocolfreemind@gmail.com">protocolfreemind@gmail.com</a> and include your purchase email + order details (if available).
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <a class="btn digistore-checkout" id="ctaBottom" href="#" rel="noopener" aria-label="Start the protocol (bottom)">
+            Start the Protocol
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-links">
+          <div>© <span id="year"></span> Free Mind Protocol. All rights reserved.</div>
+          <div class="support">
+            <span class="muted">Support:</span>
+            <a href="mailto:protocolfreemind@gmail.com" aria-label="Email support">protocolfreemind@gmail.com</a>
+          </div>
+          <div class="muted">14-day guarantee • Minimal tracking • Mobile-first</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" role="region" aria-label="Sticky call to action">
+      <div class="sticky-inner">
+        <div class="sticky-text">Now <span>$19.90</span> • 14-day guarantee</div>
+        <a class="btn sticky-btn pulse digistore-checkout" id="ctaSticky" href="#" rel="noopener" aria-label="Start the protocol (sticky)">
+          Start the Protocol
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // =========================
+    // Digistore24 Checkout URL (provided)
+    // =========================
+    const DIGISTORE24_CHECKOUT_URL = "https://www.checkout-ds24.com/product/661595";
+
+    // =========================
+    // UTM passthrough to checkout
+    // =========================
+    function buildCheckoutUrl(baseUrl) {
+      try {
+        const url = new URL(baseUrl);
+        const current = new URL(window.location.href);
+
+        const passthroughKeys = [
+          "utm_source","utm_medium","utm_campaign","utm_content","utm_term",
+          "gclid","fbclid","ttclid"
+        ];
+
+        passthroughKeys.forEach((k) => {
+          const v = current.searchParams.get(k);
+          if (v && !url.searchParams.get(k)) url.searchParams.set(k, v);
+        });
+
+        return url.toString();
+      } catch (e) {
+        return baseUrl;
+      }
+    }
+
+    // =========================
+    // Lightweight tracking hook (GTM-ready)
+    // =========================
+    function trackCtaClick(placement) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "fmp_cta_click",
+        placement,
+        timestamp: Date.now()
+      });
+    }
+
+    function wireCheckoutLinks() {
+      const finalUrl = buildCheckoutUrl(DIGISTORE24_CHECKOUT_URL);
+
+      const links = [
+        { id: "ctaHero", placement: "hero" },
+        { id: "ctaMid", placement: "mid" },
+        { id: "ctaOffer", placement: "offer" },
+        { id: "ctaBottom", placement: "bottom" },
+        { id: "ctaSticky", placement: "sticky" }
+      ];
+
+      links.forEach(({id, placement}) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.href = finalUrl;
+        el.classList.add("digistore-checkout");
+        el.addEventListener("click", () => trackCtaClick(placement));
+      });
+    }
+
+    // =========================
+    // Interactive checklist (click/keyboard)
+    // =========================
+    function setupSymptoms() {
+      const ul = document.getElementById("symptoms");
+      if (!ul) return;
+
+      function toggle(li) {
+        li.classList.toggle("clicked");
+      }
+
+      ul.querySelectorAll("li").forEach((li) => {
+        li.addEventListener("click", () => toggle(li));
+        li.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggle(li);
+          }
+        });
+      });
+    }
+
+    // =========================
+    // FAQ accordion
+    // =========================
+    function setupFaq() {
+      document.querySelectorAll(".faq-q").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const answer = btn.parentElement.querySelector(".faq-a");
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+
+          document.querySelectorAll(".faq-q").forEach((b) => b.setAttribute("aria-expanded", "false"));
+          document.querySelectorAll(".faq-a").forEach((a) => a.classList.remove("open"));
+          document.querySelectorAll(".faq-q .chev").forEach((c) => (c.textContent = "+"));
+
+          if (!expanded) {
+            btn.setAttribute("aria-expanded", "true");
+            answer.classList.add("open");
+            btn.querySelector(".chev").textContent = "–";
+          }
+        });
+      });
+    }
+
+    // =========================
+    // Rotating testimonials
+    // =========================
+    const testimonials = [
+      { initials: "ST", quote: "“I got my husband back. I’m present again.”", byline: "Sarah — Texas, USA" },
+      { initials: "MB", quote: "“The structure made it measurable. Efficiency returned.”", byline: "Mark — Berlin, Germany" },
+      { initials: "MM", quote: "“I stopped feeling shame. I feel alive again.”", byline: "Mateo — Mexico City, Mexico" },
+      { initials: "AM", quote: "“I rebuilt my mornings. My family noticed.”", byline: "Aira — Manila, Philippines" }
+    ];
+
+    function setupTestimonials() {
+      const avatar = document.getElementById("avatar");
+      const quote = document.getElementById("quote");
+      const byline = document.getElementById("byline");
+      if (!avatar || !quote || !byline) return;
+
+      let idx = 0;
+      setInterval(() => {
+        idx = (idx + 1) % testimonials.length;
+        avatar.textContent = testimonials[idx].initials;
+        quote.textContent = testimonials[idx].quote;
+        byline.textContent = testimonials[idx].byline;
+      }, 5200);
+    }
+
+    // =========================
+    // Accent switch
+    // =========================
+    function setupAccentSwitch() {
+      const btn = document.getElementById("accentSwitch");
+      if (!btn) return;
+
+      btn.addEventListener("click", () => {
+        const root = document.documentElement;
+        const current = getComputedStyle(root).getPropertyValue("--accent").trim();
+
+        if (current.toLowerCase() === "#00ff88" || current === "rgb(0, 255, 136)") {
+          root.style.setProperty("--accent", "var(--burnt)");
+        } else {
+          root.style.setProperty("--accent", "var(--neon)");
+        }
+      });
+    }
+
+    // Init
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+    wireCheckoutLinks();
+    setupSymptoms();
+    setupFaq();
+    setupTestimonials();
+    setupAccentSwitch();
+  </script>
+
+  <!-- Digistore24 scripts (as requested) -->
+  <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
+  <script type="text/javascript">
+    digistorePromocode({ "product_id": 661595, "adjust_domain": true });
+  </script>
+</body>
+</html>
