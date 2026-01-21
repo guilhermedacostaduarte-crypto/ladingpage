@@ -98,6 +98,7 @@
       --neon:#00ff88;
       --burnt:#ff6b35;
       --accent: var(--neon);
+      --cyan: #00d4ff;
 
       --error:#ff3b3b;
 
@@ -262,6 +263,25 @@
       color: rgba(230,237,243,0.78);
     }
     .microtrust span{ color: var(--accent); font-weight: 900; }
+
+    .reddit-banner{
+      background: rgba(26,26,46,0.9);
+      border: 1px solid var(--cyan);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+      color: #fff;
+      text-align: center;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    .reddit-banner pre{
+      margin: 0;
+      font-family: inherit;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
 
     .visual{
       border: 1px solid var(--border);
@@ -524,37 +544,29 @@
     .card h3{ font-size: 1rem; margin-bottom: 8px; }
     .card p{ color: var(--muted); font-size: 0.98rem; margin: 0; }
 
-    .testimonial{
+    .testimonial-cards{
       display:grid;
-      gap: 12px;
-      align-items:center;
-      justify-items:center;
-      text-align:center;
-      padding: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .testimonial-card{
       border: 1px solid var(--border);
+      background: #2a2a2a;
       border-radius: var(--radius);
-      background: rgba(255,255,255,0.02);
+      padding: 18px;
       box-shadow: var(--shadow);
+      color: #fff;
     }
-    .avatar{
-      width: 56px; height: 56px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: linear-gradient(135deg, rgba(0,255,136,0.18), rgba(255,107,53,0.12));
-      display:grid;
-      place-items:center;
-      font-weight: 900;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      color: rgba(230,237,243,0.86);
+    .testimonial-card blockquote{
+      margin: 0 0 12px;
+      font-style: italic;
+      font-size: 0.95rem;
     }
-    .quote{ font-size: 1.1rem; font-weight: 650; letter-spacing: 0.01em; }
-    .byline{
-      color: var(--muted);
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.82rem;
+    .testimonial-card cite{
+      color: var(--cyan);
+      font-weight: 600;
+      font-size: 0.85rem;
     }
 
     .offer-wrap{
@@ -640,6 +652,60 @@
       color: var(--accent);
       flex: 0 0 auto;
       margin-top: 2px;
+    }
+
+    .social-proof{
+      display:flex;
+      flex-direction:column;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #a0a0a0;
+    }
+    .social-proof div{
+      display:flex;
+      align-items:center;
+      gap: 8px;
+    }
+
+    .cta-icons{
+      display:flex;
+      justify-content:center;
+      gap: 16px;
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .cta-icons span{
+      display:flex;
+      align-items:center;
+      gap: 4px;
+    }
+
+    .faq-strategic{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #1a1a1a;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    .faq-strategic h2{
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+    .faq-strategic dl{
+      display:grid;
+      gap: 16px;
+    }
+    .faq-strategic dt{
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .faq-strategic dd{
+      margin: 0;
+      color: var(--muted);
     }
 
     .faq{
@@ -743,7 +809,7 @@
       .hero-grid{grid-template-columns: 1fr; }
       .problem-grid{grid-template-columns: 1fr;}
       .science-grid{grid-template-columns: 1fr;}
-      .cards{grid-template-columns: 1fr 1fr;}
+      .testimonial-cards{grid-template-columns: 1fr;}
     }
     @media (max-width: 520px){
       .cards{grid-template-columns: 1fr;}
@@ -780,6 +846,15 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-card">
+            <div class="reddit-banner">
+              <pre>┌─────────────────────────────────────────────────┐
+│  👋 Coming from Reddit?                          │
+│                                                  │
+│  You just saw why blockers and willpower fail.  │
+│  Scroll down to see the complete 30-day system  │
+│  that 350+ people are using instead.            │
+└─────────────────────────────────────────────────┘</pre>
+            </div>
             <div class="kicker">A high-tech protocol — inside one book</div>
             <h1>
               You Are Not Broken.<br />
@@ -924,7 +999,7 @@
         <div class="kicker">Protocol</div>
         <h2>The Solution: one book, four modules, 30 days.</h2>
         <p class="muted">
-          The book contains everything you need — a complete system you can execute without extra products.
+          The same system that makes blockers obsolete and willpower unnecessary:
         </p>
 
         <div class="cards" style="margin-top:16px">
@@ -960,10 +1035,19 @@
           Not “hustle”. Not “vibes”. Just a protocol that rebuilds attention and self-control.
         </p>
 
-        <div class="testimonial" style="margin-top:16px" aria-live="polite">
-          <div class="avatar" id="avatar">ST</div>
-          <div class="quote" id="quote">“I got my husband back. I’m present again.”</div>
-          <div class="byline" id="byline">Sarah — Texas, USA</div>
+        <div class="testimonial-cards">
+          <div class="testimonial-card">
+            <blockquote>💬 "Day 17. Brain fog is almost gone. First time in 3 years I feel like myself."</blockquote>
+            <cite>— M.R., Software Engineer, California</cite>
+          </div>
+          <div class="testimonial-card">
+            <blockquote>💬 "The emergency protocol saved me 4 times in week 2. This is the only thing that's worked."</blockquote>
+            <cite>— J.K., 28, New York</cite>
+          </div>
+          <div class="testimonial-card">
+            <blockquote>💬 "I tried 7 different programs. This is the first one that explains the SCIENCE behind why I kept failing."</blockquote>
+            <cite>— A.S., College Student, Texas</cite>
+          </div>
         </div>
       </div>
     </section>
@@ -997,13 +1081,41 @@
             <li><span class="tick">✓</span> Clear, structured, privacy-first approach</li>
           </ul>
 
+          <div class="social-proof">
+            <div><span>✅</span> 350+ downloads in the last 30 days</div>
+            <div><span>⭐</span> Used by people in 12+ countries</div>
+            <div><span>🔒</span> 100% private - no account needed</div>
+          </div>
+
           <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
             <a class="btn pulse" id="ctaOffer" href="#" rel="noopener" aria-label="Checkout (offer)">
-              Start the Protocol
+              Get the Protocol Now - $19.90
             </a>
             <div class="tiny">Instant download (PDF) • Support: protocolfreemind@gmail.com</div>
           </div>
+
+          <div class="cta-icons">
+            <span>🔒 Instant Download</span>
+            <span>💳 Secure Payment</span>
+            <span>🔐 100% Private</span>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="faq-strategic">
+      <div class="container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <dl>
+          <dt>❓ Is this just another "motivation" program?</dt>
+          <dd>No. This is a neurochemistry-based protocol. No fluff, no shame, just step-by-step actions for each phase of dopamine recovery.</dd>
+          <dt>❓ What if I've tried everything and failed?</dt>
+          <dd>That's exactly who this is for. Most programs ignore the dopamine crash in days 1-14. This protocol is built specifically for that window.</dd>
+          <dt>❓ Is my purchase private?</dt>
+          <dd>100%. No account required. Instant PDF download. No emails unless you opt-in.</dd>
+          <dt>❓ What if it doesn't work for me?</dt>
+          <dd>The protocol is based on peer-reviewed neuroscience. Follow it for 30 days. If you don't see measurable changes, email us.</dd>
+        </dl>
       </div>
     </section>
 
@@ -1220,51 +1332,11 @@
       });
     }
 
-    const testimonials = [
-      { initials: "ST", quote: "“I got my husband back. I’m present again.”", byline: "Sarah — Texas, USA" },
-      { initials: "MB", quote: "“The structure made it measurable. Efficiency returned.”", byline: "Mark — Berlin, Germany" },
-      { initials: "MM", quote: "“I stopped feeling shame. I feel alive again.”", byline: "Mateo — Mexico City, Mexico" },
-      { initials: "AM", quote: "“I rebuilt my mornings. My family noticed.”", byline: "Aira — Manila, Philippines" }
-    ];
-
-    function setupTestimonials() {
-      const avatar = document.getElementById("avatar");
-      const quote = document.getElementById("quote");
-      const byline = document.getElementById("byline");
-      if (!avatar || !quote || !byline) return;
-
-      let idx = 0;
-      setInterval(() => {
-        idx = (idx + 1) % testimonials.length;
-        avatar.textContent = testimonials[idx].initials;
-        quote.textContent = testimonials[idx].quote;
-        byline.textContent = testimonials[idx].byline;
-      }, 5200);
-    }
-
-    function setupAccentSwitch() {
-      const btn = document.getElementById("accentSwitch");
-      if (!btn) return;
-
-      btn.addEventListener("click", () => {
-        const root = document.documentElement;
-        const current = getComputedStyle(root).getPropertyValue("--accent").trim();
-
-        if (current.toLowerCase() === "#00ff88" || current === "rgb(0, 255, 136)") {
-          root.style.setProperty("--accent", "var(--burnt)");
-        } else {
-          root.style.setProperty("--accent", "var(--neon)");
-        }
-      });
-    }
-
     document.getElementById("year").textContent = String(new Date().getFullYear());
     wireCheckoutLinks();
     trackViewContentOnce();
     setupSymptoms();
     setupFaq();
-    setupTestimonials();
-    setupAccentSwitch();
   </script>
 </body>
 </html>
