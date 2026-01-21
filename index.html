@@ -265,22 +265,57 @@
     .microtrust span{ color: var(--accent); font-weight: 900; }
 
     .reddit-banner{
-      background: rgba(26,26,46,0.9);
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
       border: 1px solid var(--cyan);
-      border-radius: var(--radius);
-      padding: 12px 16px;
-      margin-bottom: 18px;
-      font-size: 0.9rem;
-      color: #fff;
+      border-radius: 8px;
+      padding: 24px 32px;
+      margin: 20px auto 40px;
+      max-width: 800px;
+      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.15);
       text-align: center;
-      max-width: 100%;
-      box-sizing: border-box;
+      color: #fff;
     }
-    .reddit-banner pre{
-      margin: 0;
-      font-family: inherit;
-      white-space: pre-wrap;
-      word-wrap: break-word;
+    .reddit-banner .title{
+      color: var(--cyan);
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .reddit-banner .body{
+      color: #e0e0e0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    @media (max-width: 768px){
+      .reddit-banner{
+        padding: 16px;
+        margin: 20px 0 40px;
+      }
+    }
+
+    .social-proof-hero{
+      text-align: center;
+      font-size: 14px;
+      color: #a8a8a8;
+      line-height: 2;
+      margin-top: 24px;
+      padding: 20px;
+    }
+    .social-proof-hero div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .social-proof-hero .highlight{
+      color: #e0e0e0;
+      font-weight: bold;
+    }
+    @media (max-width: 768px){
+      .social-proof-hero{
+        font-size: 13px;
+        padding: 16px;
+      }
     }
 
     .visual{
@@ -708,6 +743,44 @@
       color: var(--muted);
     }
 
+    .faq{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.02);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .faq-item{ border-bottom: 1px solid var(--border); }
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{
+      width:100%;
+      text-align:left;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      padding: 16px 18px;
+      cursor:pointer;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .faq-q:focus{outline: 2px solid var(--accent); outline-offset: -2px}
+    .faq-a{ display:none; padding: 0 18px 16px; color: var(--muted); }
+    .faq-a.open{display:block}
+    .chev{
+      width: 28px;height: 28px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display:grid;
+      place-items:center;
+      background: rgba(0,0,0,0.25);
+      flex: 0 0 auto;
+    }
+
     footer{
       padding: 28px 0 88px;
       border-top: 1px solid var(--border);
@@ -792,6 +865,9 @@
         </a>
 
         <div class="nav-actions">
+          <button class="ghost" id="accentSwitch" type="button" aria-label="Switch accent color">
+            Switch Accent
+          </button>
           <a class="btn btn-secondary" href="#offer" aria-label="Jump to offer">
             Offer
           </a>
@@ -806,13 +882,11 @@
         <div class="hero-grid">
           <div class="hero-card">
             <div class="reddit-banner">
-              <pre>┌─────────────────────────────────────────────────┐
-│  👋 Coming from Reddit?                          │
-│                                                  │
-│  You just saw why blockers and willpower fail.  │
-│  Scroll down to see the complete 30-day system  │
-│  that 350+ people are using instead.            │
-└─────────────────────────────────────────────────┘</pre>
+              <div class="title">👋 Coming from Reddit?</div>
+              <div class="body">
+                You just saw why blockers, accountability apps, and willpower fail. 
+                Below is the complete 30-day protocol that works differently.
+              </div>
             </div>
             <div class="kicker">A high-tech protocol — inside one book</div>
             <h1>
@@ -831,6 +905,13 @@
               <a class="btn btn-secondary" href="#science" aria-label="Read the science">
                 See the Science
               </a>
+            </div>
+
+            <div class="social-proof-hero">
+              <div><span>✅</span> <span class="highlight">350+ downloads</span> in the last 30 days</div>
+              <div><span>🌍</span> Used by people in <span class="highlight">12+ countries</span></div>
+              <div><span>🔒</span> <span class="highlight">100% private</span> - no account needed</div>
+              <div><span>⚡</span> <span class="highlight">Instant PDF delivery</span></div>
             </div>
 
             <p class="microtrust">
@@ -877,8 +958,8 @@
 
             <ul class="checklist" id="symptoms" aria-label="Checklist of symptoms">
               <li role="button" tabindex="0"><span class="dot"></span>Can't watch a movie without checking your phone?</li>
-              <li role="button" tabindex="0"><span class="dot"></span>Feeling numb unless something is "new"?</li>
-              <li role="button" tabindex="0"><span class="dot"></span>Morning regret: "I'll stop tomorrow"?</li>
+              <li role="button" tabindex="0"><span class="dot"></span>Feeling numb unless something is “new”?</li>
+              <li role="button" tabindex="0"><span class="dot"></span>Morning regret: “I’ll stop tomorrow”?</li>
               <li role="button" tabindex="0"><span class="dot"></span>Scrolling even when you don’t want to?</li>
               <li role="button" tabindex="0"><span class="dot"></span>Focus collapses after 5–10 minutes?</li>
             </ul>
@@ -991,7 +1072,7 @@
         <div class="kicker">Social Proof</div>
         <h2>Social Proof: diverse lives, same trap — same escape.</h2>
         <p class="muted">
-          Not "hustle". Not "vibes". Just a protocol that rebuilds attention and self-control.
+          Not “hustle”. Not “vibes”. Just a protocol that rebuilds attention and self-control.
         </p>
 
         <div class="testimonial-cards">
@@ -1036,7 +1117,7 @@
             <li><span class="tick">✓</span> Complete 30-day day-by-day protocol (no extra product required)</li>
             <li><span class="tick">✓</span> Instant download (PDF) + lifetime access</li>
             <li><span class="tick">✓</span> Environment hardening checklist (devices, apps, triggers)</li>
-            <li><span class="tick">✓</span> Relapse prevention + "panic sequence" you can run instantly</li>
+            <li><span class="tick">✓</span> Relapse prevention + “panic sequence” you can run instantly</li>
             <li><span class="tick">✓</span> Clear, structured, privacy-first approach</li>
           </ul>
 
@@ -1071,10 +1152,66 @@
           <dt>❓ What if I've tried everything and failed?</dt>
           <dd>That's exactly who this is for. Most programs ignore the dopamine crash in days 1-14. This protocol is built specifically for that window.</dd>
           <dt>❓ Is my purchase private?</dt>
-          <dd>100%. No account required. Instant PDF download. E-mail is collected for feedbacks and to answer questions.</dd>
+          <dd>100%. No account required. Instant PDF download. No emails unless you opt-in.</dd>
           <dt>❓ What if it doesn't work for me?</dt>
           <dd>The protocol is based on peer-reviewed neuroscience. Follow it for 30 days. If you don't see measurable changes, email us.</dd>
         </dl>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="kicker">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq" style="margin-top:16px">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              Is the book enough to beat the addiction?
+              <span class="chev">+</span>
+            </button>
+            <div class="faq-a">
+              Yes. The book is written as a complete 30-day protocol with daily actions, environment design,
+              and relapse prevention. No extra product is required — the system is inside the book.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              What format is the book?
+              <span class="chev">+</span>
+            </button>
+            <div class="faq-a">
+              The book is delivered as a PDF for instant download.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              Do you track me or sell my data?
+              <span class="chev">+</span>
+            </button>
+            <div class="faq-a">
+              No. We do not sell personal data. This page is intentionally lightweight and privacy-first.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              How can I contact support?
+              <span class="chev">+</span>
+            </button>
+            <div class="faq-a">
+              Email <a href="mailto:protocolfreemind@gmail.com">protocolfreemind@gmail.com</a> and include your purchase email + order details (if available).
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <a class="btn" id="ctaBottom" href="#" rel="noopener" aria-label="Start the protocol (bottom)">
+            Start the Protocol
+          </a>
+        </div>
       </div>
     </section>
 
@@ -1216,10 +1353,30 @@
       });
     }
 
+    function setupFaq() {
+      document.querySelectorAll(".faq-q").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const answer = btn.parentElement.querySelector(".faq-a");
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+
+          document.querySelectorAll(".faq-q").forEach((b) => b.setAttribute("aria-expanded", "false"));
+          document.querySelectorAll(".faq-a").forEach((a) => a.classList.remove("open"));
+          document.querySelectorAll(".faq-q .chev").forEach((c) => (c.textContent = "+"));
+
+          if (!expanded) {
+            btn.setAttribute("aria-expanded", "true");
+            answer.classList.add("open");
+            btn.querySelector(".chev").textContent = "–";
+          }
+        });
+      });
+    }
+
     document.getElementById("year").textContent = String(new Date().getFullYear());
     wireCheckoutLinks();
     trackViewContentOnce();
     setupSymptoms();
+    setupFaq();
   </script>
 </body>
 </html>
