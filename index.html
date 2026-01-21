@@ -743,44 +743,6 @@
       color: var(--muted);
     }
 
-    .faq{
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.02);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .faq-item{ border-bottom: 1px solid var(--border); }
-    .faq-item:last-child{border-bottom:none}
-    .faq-q{
-      width:100%;
-      text-align:left;
-      background: transparent;
-      border: none;
-      color: var(--text);
-      padding: 16px 18px;
-      cursor:pointer;
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-    }
-    .faq-q:focus{outline: 2px solid var(--accent); outline-offset: -2px}
-    .faq-a{ display:none; padding: 0 18px 16px; color: var(--muted); }
-    .faq-a.open{display:block}
-    .chev{
-      width: 28px;height: 28px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      display:grid;
-      place-items:center;
-      background: rgba(0,0,0,0.25);
-      flex: 0 0 auto;
-    }
-
     footer{
       padding: 28px 0 88px;
       border-top: 1px solid var(--border);
@@ -865,9 +827,6 @@
         </a>
 
         <div class="nav-actions">
-          <button class="ghost" id="accentSwitch" type="button" aria-label="Switch accent color">
-            Switch Accent
-          </button>
           <a class="btn btn-secondary" href="#offer" aria-label="Jump to offer">
             Offer
           </a>
@@ -958,8 +917,8 @@
 
             <ul class="checklist" id="symptoms" aria-label="Checklist of symptoms">
               <li role="button" tabindex="0"><span class="dot"></span>Can't watch a movie without checking your phone?</li>
-              <li role="button" tabindex="0"><span class="dot"></span>Feeling numb unless something is “new”?</li>
-              <li role="button" tabindex="0"><span class="dot"></span>Morning regret: “I’ll stop tomorrow”?</li>
+              <li role="button" tabindex="0"><span class="dot"></span>Feeling numb unless something is "new"?</li>
+              <li role="button" tabindex="0"><span class="dot"></span>Morning regret: "I'll stop tomorrow"?</li>
               <li role="button" tabindex="0"><span class="dot"></span>Scrolling even when you don’t want to?</li>
               <li role="button" tabindex="0"><span class="dot"></span>Focus collapses after 5–10 minutes?</li>
             </ul>
@@ -1072,7 +1031,7 @@
         <div class="kicker">Social Proof</div>
         <h2>Social Proof: diverse lives, same trap — same escape.</h2>
         <p class="muted">
-          Not “hustle”. Not “vibes”. Just a protocol that rebuilds attention and self-control.
+          Not "hustle". Not "vibes". Just a protocol that rebuilds attention and self-control.
         </p>
 
         <div class="testimonial-cards">
@@ -1117,7 +1076,7 @@
             <li><span class="tick">✓</span> Complete 30-day day-by-day protocol (no extra product required)</li>
             <li><span class="tick">✓</span> Instant download (PDF) + lifetime access</li>
             <li><span class="tick">✓</span> Environment hardening checklist (devices, apps, triggers)</li>
-            <li><span class="tick">✓</span> Relapse prevention + “panic sequence” you can run instantly</li>
+            <li><span class="tick">✓</span> Relapse prevention + "panic sequence" you can run instantly</li>
             <li><span class="tick">✓</span> Clear, structured, privacy-first approach</li>
           </ul>
 
@@ -1152,66 +1111,10 @@
           <dt>❓ What if I've tried everything and failed?</dt>
           <dd>That's exactly who this is for. Most programs ignore the dopamine crash in days 1-14. This protocol is built specifically for that window.</dd>
           <dt>❓ Is my purchase private?</dt>
-          <dd>100%. No account required. Instant PDF download. No emails unless you opt-in.</dd>
+          <dd>100%. No account required. Instant PDF download. E-mail is collected for feedbacks and to answer questions.</dd>
           <dt>❓ What if it doesn't work for me?</dt>
           <dd>The protocol is based on peer-reviewed neuroscience. Follow it for 30 days. If you don't see measurable changes, email us.</dd>
         </dl>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="kicker">FAQ</div>
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="faq" style="margin-top:16px">
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              Is the book enough to beat the addiction?
-              <span class="chev">+</span>
-            </button>
-            <div class="faq-a">
-              Yes. The book is written as a complete 30-day protocol with daily actions, environment design,
-              and relapse prevention. No extra product is required — the system is inside the book.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              What format is the book?
-              <span class="chev">+</span>
-            </button>
-            <div class="faq-a">
-              The book is delivered as a PDF for instant download.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              Do you track me or sell my data?
-              <span class="chev">+</span>
-            </button>
-            <div class="faq-a">
-              No. We do not sell personal data. This page is intentionally lightweight and privacy-first.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              How can I contact support?
-              <span class="chev">+</span>
-            </button>
-            <div class="faq-a">
-              Email <a href="mailto:protocolfreemind@gmail.com">protocolfreemind@gmail.com</a> and include your purchase email + order details (if available).
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top:18px">
-          <a class="btn" id="ctaBottom" href="#" rel="noopener" aria-label="Start the protocol (bottom)">
-            Start the Protocol
-          </a>
-        </div>
       </div>
     </section>
 
