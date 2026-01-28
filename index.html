@@ -4,7 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Google Tag Manager -->
+  <!-- 1. Google Analytics 4 (GA4) - INSTALADO -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W41YWKMEYT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W41YWKMEYT');
+  </script>
+
+  <!-- 2. Google Tag Manager (GTM) -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -26,7 +36,7 @@
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
 
-  <!-- Reddit Pixel (Mantido como backup direto) -->
+  <!-- 3. Reddit Pixel -->
   <script>
   !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.async=!0;t.src="https://www.redditstatic.com/ads/pixel.js";var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
   rdt("init","a2_idhz1ysezysk");
@@ -324,7 +334,7 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) - PARTE 2 INSTALADA -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN6MFKBN"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
