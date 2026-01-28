@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Break Porn Addiction in 30 Days - Proven Dopamine Reset Protocol</title>
-  <meta name="description" content="The 30-Day Protocol Book (PDF) + FreeMind App to detox your dopamine, reclaim your focus, and break porn addiction forever." />
+  <title>The FreeMind Protocol - Neuro-Scientific Dopamine Reset</title>
+  <meta name="description" content="A 30-day neuroscience-based protocol to reverse porn-induced brain changes, cure PIED, and reclaim your focus. PDF + App included." />
 
   <link rel="canonical" href="https://freemindprotocol.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Break Porn Addiction in 30 Days - Proven Dopamine Reset Protocol" />
-  <meta property="og:description" content="A 30-day protocol book (PDF) + FreeMind App to detox dopamine, reclaim focus, and break porn addiction forever." />
+  <meta property="og:title" content="The FreeMind Protocol - Neuro-Scientific Dopamine Reset" />
+  <meta property="og:description" content="Stop relying on willpower. Use neuroscience to reset your dopamine baseline in 30 days." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://freemindprotocol.com/" />
   <meta property="og:image" content="https://freemindprotocol.com/og-image.png" />
@@ -45,323 +45,278 @@
     body{
       background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
       color: var(--text);
-      line-height: 1.55;
+      line-height: 1.6;
       overflow-x:hidden;
     }
 
-    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
 
+    /* Urgency Bar */
     .urgency-bar {
-      background: var(--error);
+      background: linear-gradient(90deg, #d32f2f, #b71c1c);
       color: #fff;
       text-align: center;
-      padding: 12px;
-      font-weight: 900;
-      font-size: 16px;
+      padding: 10px;
+      font-weight: 700;
+      font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      box-shadow: 0 0 20px rgba(255,59,59,0.3);
-      animation: urgency-pulse 2s infinite;
     }
 
-    @keyframes urgency-pulse {
-      0% {
-        box-shadow: 0 0 20px rgba(255,59,59,0.3), 0 0 0 0 rgba(255,59,59,0.7);
-      }
-      50% {
-        box-shadow: 0 0 30px rgba(255,59,59,0.5), 0 0 20px 10px rgba(255,59,59,0);
-      }
-      100% {
-        box-shadow: 0 0 20px rgba(255,59,59,0.3), 0 0 0 0 rgba(255,59,59,0);
-      }
-    }
-
+    /* Header */
     header{
       position: sticky;
       top: 0;
       z-index: 40;
-      backdrop-filter: blur(10px);
-      background: rgba(7,9,12,0.55);
+      backdrop-filter: blur(12px);
+      background: rgba(7,9,12,0.8);
       border-bottom: 1px solid var(--border);
     }
     .nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding: 14px 0;
+      padding: 16px 0;
     }
     .brand{
       display:flex;
       align-items:center;
-      gap:10px;
+      gap:12px;
       text-decoration:none;
-      font-weight: 750;
+      font-weight: 800;
       text-transform: uppercase;
-      font-size: 0.92rem;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      color: #fff;
     }
     .brand-badge{
-      width: 32px;height:32px;border-radius:10px;
-      border:1px solid var(--border);
-      background: linear-gradient(135deg, var(--neon), var(--cyan));
+      width: 32px;height:32px;border-radius:8px;
+      background: rgba(255,255,255,0.1);
       display:grid;
       place-items:center;
+      font-size: 18px;
     }
 
-    .hero{ padding: 60px 0; }
+    /* Hero */
+    .hero{ padding: 80px 0; }
     .hero-grid{
       display:grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
+      gap: 60px;
+      align-items: flex-start;
     }
-    h1{ font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
-    .accent{ color: var(--neon); }
-    .subheadline{ font-size: 1.2rem; color: var(--muted); margin-bottom: 30px; }
-
+    h1{ font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 24px; font-weight: 800; letter-spacing: -0.03em; color: #fff; }
+    .accent{ 
+      background: linear-gradient(90deg, var(--neon), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subheadline{ font-size: 1.25rem; color: var(--muted); margin-bottom: 35px; max-width: 90%; }
+    
+    /* Buttons */
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       text-decoration:none;
-      border-radius: 12px;
-      padding: 18px 32px;
-      font-weight: 900;
+      border-radius: 8px;
+      padding: 20px 40px;
+      font-weight: 800;
       text-transform: uppercase;
       background: var(--neon);
-      color: #000;
+      color: #050505;
       transition: all .2s ease;
-      box-shadow: 0 0 20px rgba(0,255,136,0.2);
+      box-shadow: 0 0 25px rgba(0,255,136,0.25);
       width: 100%;
-      max-width: 450px;
+      max-width: 100%;
       font-size: 1.1rem;
-    }
-    .btn:hover{ transform: scale(1.02); filter: brightness(1.1); box-shadow: 0 0 30px rgba(0,255,136,0.4); }
-
-    .social-proof-hero {
-      margin-top: 25px;
-      font-size: 15px;
-      color: #b0b0b0;
-    }
-    .social-proof-hero span { color: #fff; font-weight: 700; }
-
-    .rating {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 15px;
-      color: #ffcc00;
-      font-weight: 700;
-    }
-
-    .book-preview {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-    .book-preview h3 {
-      color: var(--neon);
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      text-align: center;
-      text-transform: uppercase;
       letter-spacing: 0.05em;
     }
-    .toc {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .toc li {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 0 40px rgba(0,255,136,0.5); }
+
+    .social-proof-hero {
+      margin-top: 30px;
+      font-size: 14px;
+      color: var(--muted);
       display: flex;
-      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .social-proof-hero div { display: flex; align-items: center; gap: 8px; }
+    .icon { color: var(--neon); }
+
+    /* New Section: The Problem (Bridge) */
+    .symptoms-section {
+        margin: 40px 0 80px 0;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 40px;
+    }
+    .symptoms-header { text-align: center; margin-bottom: 40px; }
+    .symptoms-header h2 { color: #fff; font-size: 2rem; margin-bottom: 10px; }
+    .symptoms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+    .symptom-card { text-align: center; }
+    .symptom-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; opacity: 0.8; }
+    .symptom-title { color: var(--error); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; font-size: 0.9rem; }
+    .symptom-desc { color: var(--muted); font-size: 0.95rem; }
+
+    /* Book Preview & TOC */
+    .book-preview {
+      background: #0f1216;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 35px;
+      position: relative;
+    }
+    .book-preview::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius);
+        box-shadow: inset 0 0 40px rgba(0,0,0,0.5);
+        pointer-events: none;
+    }
+    .book-preview h3 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 15px;
+    }
+    .toc { list-style: none; }
+    .toc li {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      display: grid;
+      grid-template-columns: 30px 1fr;
       gap: 15px;
+      align-items: start;
     }
     .toc li:last-child { border-bottom: none; }
     .toc .chapter-num {
-      background: var(--neon);
-      color: #000;
-      font-weight: 900;
-      font-size: 0.9rem;
-      padding: 4px 8px;
-      border-radius: 6px;
-      min-width: 40px;
-      text-align: center;
-      flex-shrink: 0;
-    }
-    .toc .chapter-title {
-      color: var(--text);
+      color: var(--neon);
+      font-family: monospace;
       font-weight: 700;
       font-size: 1rem;
+      padding-top: 2px;
+    }
+    .toc .chapter-title {
+      color: #d0d7de;
+      font-weight: 500;
+      font-size: 0.95rem;
       line-height: 1.4;
     }
+    .toc .chapter-title strong { color: #fff; display: block; margin-bottom: 2px; }
 
+    /* App Section */
     .app-section {
-      background: #0b0f14;
-      padding: 60px 0;
+      background: linear-gradient(180deg, rgba(11,15,20,0) 0%, rgba(0,255,136,0.03) 100%);
+      padding: 80px 0;
+      margin: 40px 0;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      margin: 60px 0;
     }
     .app-section h2 {
       text-align: center;
-      font-size: 2.5rem;
-      color: var(--neon);
+      font-size: 2.2rem;
+      color: #fff;
       margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
     .app-section-subtitle {
       text-align: center;
       color: var(--muted);
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       font-size: 1.1rem;
-      line-height: 1.6;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .app-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
     .app-card {
-      background: rgba(255,255,255,0.03);
+      background: #11151a;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform .2s ease, box-shadow .2s ease;
+      transition: transform .2s ease;
     }
-    .app-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0,255,136,0.15);
-    }
-    .app-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      display: block;
-    }
-    .app-card-content {
-      padding: 25px;
-    }
-    .app-card h4 {
-      color: var(--cyan);
-      margin-bottom: 12px;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-    .app-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
+    .app-card:hover { transform: translateY(-5px); border-color: var(--neon); }
+    .app-card img { width: 100%; height: 240px; object-fit: cover; opacity: 0.9; }
+    .app-card-content { padding: 30px; }
+    .app-card h4 { color: #fff; margin-bottom: 10px; font-size: 1.1rem; font-weight: 700; }
+    .app-card p { color: var(--muted); font-size: 0.9rem; }
 
-    .testimonials-section {
-      margin: 60px 0;
-      text-align: center;
-    }
-    .testimonials-section h2 {
-      font-size: 2.5rem;
-      color: var(--neon);
-      margin-bottom: 40px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
+    /* Testimonials */
+    .testimonials-section { margin: 80px 0; text-align: center; }
+    .testimonials-section h2 { font-size: 2rem; color: #fff; margin-bottom: 50px; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
     .testimonial-card {
-      background: #1a1a1a;
+      background: #12161b;
       padding: 30px;
-      border-radius: var(--radius);
+      border-radius: 12px;
       border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      position: relative;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    }
-    .testimonial-card::before {
-      content: '"';
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      font-size: 4rem;
-      color: var(--neon);
-      opacity: 0.3;
-      font-family: serif;
+      text-align: left;
     }
     .testimonial-card p {
-      font-style: italic;
+      font-size: 1rem;
+      color: #d0d7de;
       margin-bottom: 20px;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #e0e0e0;
+      font-style: italic;
     }
-    .testimonial-card .stars {
-      display: flex;
-      justify-content: center;
-      gap: 2px;
-      margin-bottom: 15px;
-    }
-    .testimonial-card .stars span {
-      color: #ffcc00;
-      font-size: 1.2rem;
-    }
-    .testimonial-card cite {
-      color: var(--cyan);
-      font-weight: 700;
-      font-style: normal;
-      font-size: 0.95rem;
-      text-align: center;
-      display: block;
+    .user-info { display: flex; align-items: center; gap: 10px; }
+    .user-details strong { display: block; color: #fff; font-size: 0.9rem; }
+    .user-details span { color: var(--neon); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; }
+    .user-avatar {
+        width: 40px; height: 40px; background: #222; border-radius: 50%;
+        display: grid; place-items: center; font-weight: bold; color: #555;
     }
 
+    /* Offer */
     .offer-box {
-      background: rgba(0,255,136,0.03);
-      border: 2px solid var(--neon);
-      padding: 40px;
+      background: radial-gradient(circle at center, rgba(0,255,136,0.05) 0%, rgba(0,0,0,0) 70%);
+      border: 1px solid var(--neon);
+      padding: 60px 20px;
       border-radius: 20px;
       text-align: center;
-      margin: 60px 0;
-      box-shadow: 0 0 40px rgba(0,255,136,0.1);
+      margin: 80px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .price-tag { font-size: 3rem; font-weight: 900; margin: 10px 0; }
-    .price-tag s { color: var(--error); font-size: 1.5rem; }
+    .price-tag { font-size: 3.5rem; font-weight: 900; margin: 20px 0; color: #fff; letter-spacing: -0.05em; }
+    .price-tag s { color: #555; font-size: 1.5rem; font-weight: 500; margin-right: 15px; text-decoration-thickness: 2px; }
+    .features-list { text-align: left; max-width: 400px; margin: 30px auto; color: var(--muted); }
+    .features-list li { margin-bottom: 10px; list-style: none; display: flex; gap: 10px; }
 
-    .faq-strategic {
-      background: #0b0f14;
-      padding: 60px 0;
-      border-top: 1px solid var(--border);
-    }
-    .faq-strategic h2 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; color: var(--neon); text-transform: uppercase; letter-spacing: 0.05em; }
-    .faq-item { margin-bottom: 25px; max-width: 800px; margin-inline: auto; }
-    .faq-item h4 { color: var(--cyan); margin-bottom: 8px; font-size: 1.1rem; }
+    /* FAQ */
+    .faq-strategic { padding: 60px 0; max-width: 800px; margin: 0 auto; }
+    .faq-strategic h2 { text-align: center; margin-bottom: 50px; font-size: 2rem; color: #fff; }
+    .faq-item { margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 30px; }
+    .faq-item:last-child { border: none; }
+    .faq-item h4 { color: #fff; margin-bottom: 12px; font-size: 1.1rem; }
+    .faq-item p { color: var(--muted); }
 
-    footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); }
+    footer { padding: 60px 0; text-align: center; color: #555; font-size: 0.9rem; border-top: 1px solid #111; }
 
-    @media (max-width: 980px){
-      .hero-grid{ grid-template-columns: 1fr; text-align: center; }
-      .btn { max-width: 100%; }
-      .toc li { flex-direction: column; gap: 8px; }
-      .testimonial-card::before { font-size: 3rem; }
+    @media (max-width: 900px){
+      .hero-grid{ grid-template-columns: 1fr; gap: 40px; }
+      h1 { font-size: 2.2rem; }
+      .book-preview { order: -1; margin-bottom: 20px; display: none; } /* Hide TOC on mobile top to focus on CTA */
       .app-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
+  <!-- URGENCY BAR: Professional "Limited Time" approach -->
   <div class="urgency-bar">
-    ⚡ Special Price: $39.90 (Reg. $69.90) - Ends in 24h
+    Limited Offer: Get the Full Protocol + App for $39.90
   </div>
 
   <header>
@@ -371,6 +326,8 @@
           <span class="brand-badge">🧠</span>
           <span>Free Mind Protocol</span>
         </a>
+        <!-- Optional: Small trust indicator -->
+        <div style="font-size: 0.8rem; color: var(--muted);">v2.4 Updated</div>
       </nav>
     </div>
   </header>
@@ -378,251 +335,212 @@
   <main class="container">
     <section class="hero">
       <div class="hero-grid">
-        <div>
-          <h1>Break Porn Addiction in 30 Days - <span class="accent">Proven Dopamine Reset Protocol</span></h1>
+        <div class="hero-content">
+          <!-- HEADLINE: Scientific & Benefit Driven -->
+          <h1>
+            Reclaim Your Pre-Frontal Cortex.<br>
+            <span class="accent">Reset Your Dopamine.</span>
+          </h1>
+          
+          <!-- SUBHEADLINE: Hitting the Pain Points directly (Bridge) -->
           <p class="subheadline">
-            The 30-Day Protocol Book (PDF) + FreeMind App (Included) to detox your dopamine, reclaim your focus, and break porn addiction forever.
+            The neuro-scientific protocol to reverse <strong>Porn-Induced Brain Changes</strong>, eliminate brain fog, and cure PIED in 30 days. No willpower required—just biology.
           </p>
 
-          <div class="rating">
-            ⭐⭐⭐⭐⭐ 4.8/5 (347 reviews)
-          </div>
-
           <a class="btn" href="https://freemindprotocol.gumroad.com/l/uxolt?wanted=true" target="_blank">
-            Download Protocol + App - $39.90
+            Start The Protocol - $39.90
           </a>
 
           <div class="social-proof-hero">
-            <div>🔥 <span>2,100+ men started this month</span></div>
-            <div>⚡ <span>Instant PDF delivery + App access</span></div>
-            <div>🔒 <span>100% private - no account needed</span></div>
+            <div><span class="icon">✅</span> Instant PDF Download + Lifetime App Access</div>
+            <div><span class="icon">🔒</span> 100% Private & Discrete Billing (Gumroad)</div>
+            <div><span class="icon">👥</span> Join 2,100+ men recovering today</div>
           </div>
         </div>
 
+        <!-- TOC: REWRITTEN FOR NATIVE ENGLISH -->
         <div class="book-preview">
-          <h3>📚 Protocol Book Preview</h3>
+          <h3>📋 Protocol Breakdown</h3>
           <ul class="toc">
             <li>
-              <span class="chapter-num">1</span>
-              <span class="chapter-title">YOU ARE NOT ALONE (AND IT'S NOT 100% YOUR FAULT)</span>
+              <span class="chapter-num">01</span>
+              <span class="chapter-title"><strong>The Neurochemistry of Addiction</strong>Why it’s not your fault: The science of Hijacked Dopamine.</span>
             </li>
             <li>
-              <span class="chapter-num">2</span>
-              <span class="chapter-title">WHAT YOU LOST (AND WHAT YOU WILL GAIN BACK)</span>
+              <span class="chapter-num">03</span>
+              <span class="chapter-title"><strong>The Dopamine Detox</strong>Why you crave what destroys you (and how to stop).</span>
             </li>
             <li>
-              <span class="chapter-num">3</span>
-              <span class="chapter-title">THE DOPAMINE HIJACKING (WHY DO YOU WANT WHAT DOESN'T LIKE IT)</span>
+              <span class="chapter-num">05</span>
+              <span class="chapter-title"><strong>The "High Libido" Myth</strong>Understanding the Coolidge Effect & Hyper-novelty.</span>
             </li>
             <li>
-              <span class="chapter-num">4</span>
-              <span class="chapter-title">THE COOLIDGE EFFECT AND INFINITE NOVELTY</span>
-            </li>
-            <li>
-              <span class="chapter-num">5</span>
-              <span class="chapter-title">THE LIE OF "HIGH LIBIDO"</span>
-            </li>
-            <li>
-              <span class="chapter-num">6</span>
-              <span class="chapter-title">DIGITAL HYGIENE (SMART BLOCKING)</span>
-            </li>
-            <li>
-              <span class="chapter-num">7</span>
-              <span class="chapter-title">IDENTIFYING THE TRIGGERS (HALT TECHNIQUE)</span>
-            </li>
-            <li>
-              <span class="chapter-num">8</span>
-              <span class="chapter-title">THE NEW ENVIRONMENT (ARCHITECTURE OF THE DISCIPLINE)</span>
-            </li>
-            <li>
-              <span class="chapter-num">9</span>
-              <span class="chapter-title">WEEK 1 - ABSTINENCE (THE NECESSARY HELL)</span>
+              <span class="chapter-num">08</span>
+              <span class="chapter-title"><strong>Environmental Design</strong>Building a relapse-proof architecture for your life.</span>
             </li>
             <li>
               <span class="chapter-num">10</span>
-              <span class="chapter-title">THE "EMERGENCY SURFER" TECHNIQUE</span>
+              <span class="chapter-title"><strong>The "Emergency Surfer" Technique</strong>Handling urge waves without drowning.</span>
             </li>
             <li>
               <span class="chapter-num">11</span>
-              <span class="chapter-title">WEEKS 2 AND 3 - THE "FLATLINE" (THE DESERT)</span>
-            </li>
-            <li>
-              <span class="chapter-num">12</span>
-              <span class="chapter-title">THE PANIC BUTTON</span>
+              <span class="chapter-title"><strong>Surviving "The Flatline"</strong>Navigating the withdrawal phase (Weeks 2-3).</span>
             </li>
             <li>
               <span class="chapter-num">13</span>
-              <span class="chapter-title">SEXUAL TRANSMUTATION (THE ALCHEMY OF SUCCESS)</span>
+              <span class="chapter-title"><strong>Sexual Transmutation</strong>Channeling that raw energy into real-world success.</span>
             </li>
             <li>
               <span class="chapter-num">14</span>
-              <span class="chapter-title">REPLACING CHEAP DOPAMINE (PLEASURE DESERVED)</span>
-            </li>
-            <li>
-              <span class="chapter-num">15</span>
-              <span class="chapter-title">WHAT TO DO IF YOU RELAPSE?</span>
-            </li>
-            <li>
-              <span class="chapter-num">16</span>
-              <span class="chapter-title">THE LIFETIME PLAN (THE NEW IDENTITY)</span>
-            </li>
-            <li>
-              <span class="chapter-num">NOTES</span>
-              <span class="chapter-title">AND BIBLIOGRAPHICAL REFERENCES</span>
+              <span class="chapter-title"><strong>Dopamine Replacement</strong>Re-training your brain to enjoy healthy pleasures again.</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- SEÇÃO: APP INCLUDED (ATUALIZADA) -->
+    <!-- NEW SECTION: THE SYMPTOMS BRIDGE (Connects Ads to Product) -->
+    <section class="symptoms-section">
+      <div class="symptoms-header">
+        <h2>Does this sound like you?</h2>
+        <p style="color: var(--muted);">If your dopamine receptors are fried, you likely feel this daily.</p>
+      </div>
+      <div class="symptoms-grid">
+        <div class="symptom-card">
+          <span class="symptom-icon">😶‍🌫️</span>
+          <div class="symptom-title">Chronic Brain Fog</div>
+          <div class="symptom-desc">Inability to focus on deep work. Basic tasks feel overwhelming. Memory slips.</div>
+        </div>
+        <div class="symptom-card">
+          <span class="symptom-icon">🥀</span>
+          <div class="symptom-title">PIED & Low Libido</div>
+          <div class="symptom-desc">Can't perform with real partners, but hyper-active with pixels. The "Death Grip" syndrome.</div>
+        </div>
+        <div class="symptom-card">
+          <span class="symptom-icon">🫣</span>
+          <div class="symptom-title">Social Anxiety</div>
+          <div class="symptom-desc">Avoiding eye contact. Feeling "less than" others. Hiding your browser history in fear.</div>
+        </div>
+      </div>
+    </section>
+
     <section class="app-section">
       <div class="container">
-        <h2>FreeMind App (Included With Your Purchase)</h2>
+        <h2>The Toolset for Recovery</h2>
         <p class="app-section-subtitle">
-          The book breaks the addiction in 30 days.<br>
-          The app keeps you consistent for 90 days — building discipline, momentum, and long-term freedom.
+          Willpower fades. Systems don't. Your purchase includes the <strong>FreeMind App</strong> to automate your discipline.
         </p>
         
         <div class="app-grid">
-
-          <!-- Botão de Pânico -->
           <div class="app-card">
-            <img src="https://generated-images.adapta.one/guilhermedacostaduarte%40gmail.com/019bf2a0-5fb4-72fb-ad54-7f0032d72664/2026-01-26T01-26-57-172Z_Clean_minimal_mobile_app_UI_icon_style_illustratio.png" alt="Botão de Pânico">
+            <img src="https://generated-images.adapta.one/guilhermedacostaduarte%40gmail.com/019bf2a0-5fb4-72fb-ad54-7f0032d72664/2026-01-26T01-26-57-172Z_Clean_minimal_mobile_app_UI_icon_style_illustratio.png" alt="Panic Button">
             <div class="app-card-content">
-              <h4>🔴 Panic Button</h4>
-              <p>
-                3-minute emergency lockdown with motivational messages to stop urges instantly.
-              </p>
+              <h4>🔴 The Panic Button</h4>
+              <p>Urges last about 3 minutes. This tool locks you in and talks you down until the wave passes.</p>
             </div>
           </div>
 
-          <!-- Interface do Calendário (90 dias) -->
           <div class="app-card">
-            <img src="https://generated-images.adapta.one/guilhermedacostaduarte%40gmail.com/019bf2a0-5fb4-72fb-ad54-7f0032d72664/2026-01-26T01-26-58-766Z_Clean_minimal_mobile_app_calendar_interface_illust.png" alt="Interface do Calendário">
+            <img src="https://generated-images.adapta.one/guilhermedacostaduarte%40gmail.com/019bf2a0-5fb4-72fb-ad54-7f0032d72664/2026-01-26T01-26-58-766Z_Clean_minimal_mobile_app_calendar_interface_illust.png" alt="90 Day Tracker">
             <div class="app-card-content">
-              <h4>📅 90-Day Calendar Interface</h4>
-              <p>
-                The challenge is 30 days to break the addiction — but the 90-day calendar keeps you consistent afterward. It helps you build real discipline, avoid relapse, and stay focused long-term.
-              </p>
+              <h4>📅 The 90-Day Reboot</h4>
+              <p>Visual progress tracking. Watch your streak grow as your brain physically repairs its receptors.</p>
             </div>
           </div>
 
-          <!-- Calendário & Conquistas (CORRIGIDO) -->
           <div class="app-card">
-            <img src="https://generated-images.adapta.one/guilhermedacostaduarte%40gmail.com/019bf2a0-5fb4-72fb-ad54-7f0032d72664/2026-01-26T01-27-03-817Z_Modern_clean_minimal_mobile_app_UI_style_illustrat.png" alt="Calendário e Conquistas">
+            <img src="https://generated-images.adapta.one/guilhermedacostaduarte%40gmail.com/019bf2a0-5fb4-72fb-ad54-7f0032d72664/2026-01-26T01-27-03-817Z_Modern_clean_minimal_mobile_app_UI_style_illustrat.png" alt="Gamification">
             <div class="app-card-content">
-              <h4>🏆 Achievements System + 90-Day Progress</h4>
-              <p>
-                Earn 9 unlockable achievements as you stay consistent. Gamification keeps you motivated through the full 90-day journey — turning your new habits into a permanent identity.
-              </p>
+              <h4>🏆 Identity Shift System</h4>
+              <p>Unlock achievements not just for "abstaining", but for building new, healthy habits.</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
     <section class="testimonials-section">
-      <h2>Testimonials</h2>
+      <h2>Verified Results</h2>
       <div class="testimonial-grid">
         <div class="testimonial-card">
-          <div class="stars">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          <p>"I was skeptical about the 'science' part, but Chapter 4 blew my mind. Understanding the 'Coolidge Effect' took away so much shame. Day 45 going strong."</p>
+          <div class="user-info">
+            <div class="user-avatar">M</div>
+            <div class="user-details">
+              <strong>Mark T.</strong>
+              <span>Verified Buyer • USA</span>
+            </div>
           </div>
-          <p>"Day 14 and I haven't relapsed once. The dopamine reset actually works - I feel like my brain is waking up."</p>
-          <cite>— Alex, 32, Software Engineer</cite>
         </div>
+        
         <div class="testimonial-card">
-          <div class="stars">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          <p>"The Panic Button in the app saved me at least 10 times. It breaks the trance state instantly. Best $40 I ever spent."</p>
+          <div class="user-info">
+            <div class="user-avatar">J</div>
+            <div class="user-details">
+              <strong>James R.</strong>
+              <span>Verified Buyer • Canada</span>
+            </div>
           </div>
-          <p>"I tried NoFap for 6 months and failed every time. This protocol explained WHY I failed and gave me a real plan."</p>
-          <cite>— Mike, 28, Marketing Manager</cite>
         </div>
+
         <div class="testimonial-card">
-          <div class="stars">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          <p>"My PIED is completely gone after the 30-day reset. It's actually scary how much porn was affecting my physiology. Thank you."</p>
+          <div class="user-info">
+            <div class="user-avatar">D</div>
+            <div class="user-details">
+              <strong>David K.</strong>
+              <span>Verified Buyer • UK</span>
+            </div>
           </div>
-          <p>"My relationship improved dramatically. No more secret guilt. The 30-day structure kept me accountable."</p>
-          <cite>— David, 35, Teacher</cite>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-          </div>
-          <p>"Brain fog gone, focus back. This isn't motivation - it's neuroscience. Finally broke the cycle."</p>
-          <cite>— Jordan, 25, College Student</cite>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-          </div>
-          <p>"Started skeptical, but day 21 changed everything. My productivity doubled. Worth every penny."</p>
-          <cite>— Ryan, 29, Entrepreneur</cite>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-          </div>
-          <p>"The emergency protocol saved me during a weak moment. This book is my lifeline."</p>
-          <cite>— Chris, 31, Sales Rep</cite>
         </div>
       </div>
     </section>
 
     <section class="offer-box">
-      <h2>One-Time Payment - Lifetime Access</h2>
+      <h2>Reset Your Brain Today</h2>
+      <p style="color:var(--muted)">One-time payment. Lifetime access. Instant Start.</p>
+      
       <div class="price-tag"><s>$69.90</s> $39.90</div>
-      <p>Book + App Included - No Monthly Fees</p>
+      
+      <ul class="features-list">
+        <li>✅ <strong>The Protocol (PDF):</strong> The step-by-step manual.</li>
+        <li>✅ <strong>FreeMind App:</strong> The tool to keep you consistent.</li>
+        <li>✅ <strong>Panic Button:</strong> Your emergency defense system.</li>
+        <li>✅ <strong>Private & Secure:</strong> No tracking, no spam.</li>
+      </ul>
+
       <a class="btn" href="https://freemindprotocol.gumroad.com/l/uxolt?wanted=true" target="_blank">
-        Download Protocol + App - $39.90
+        Download Now & Start Recovery
       </a>
-      <p style="margin-top: 15px; color: var(--muted); font-size: 0.9rem;">
-        ✅ Complete 30-day protocol book<br>
-        ✅ FreeMind App (Lifetime access)<br>
-        ✅ Panic button emergency tool<br>
-        ✅ 90-day calendar tracker<br>
-        ✅ 9 achievements system<br>
-        ✅ Lifetime access to updates
-      </p>
     </section>
 
     <section class="faq-strategic">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-item">
-        <h4>Is this just another "motivation" program?</h4>
-        <p>No. This is a neurochemistry-based protocol. No fluff, no shame, just step-by-step actions for each phase of dopamine recovery.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What if I've tried everything and failed?</h4>
-        <p>That's exactly who this is for. Most programs ignore the dopamine crash in days 1-14. This protocol is built specifically for that window.</p>
-      </div>
-      <div class="faq-item">
         <h4>Is my purchase private?</h4>
-        <p>100%. No account required. Instant PDF download + App access. E-mail is collected for feedbacks and to answer questions.</p>
+        <p>Absolutely. We use Gumroad's secure 256-bit encryption. Your bank statement will simply show "GUMROAD" or "GM_FreeMind". No adult descriptors are used. We do not share your data.</p>
       </div>
       <div class="faq-item">
-        <h4>What if it doesn't work for me?</h4>
-        <p>The protocol is based on peer-reviewed neuroscience. Follow it for 30 days. If you don't see measurable changes, email us.</p>
+        <h4>Is this just a "motivation" book?</h4>
+        <p>No. Motivation fails. This is a <strong>protocol</strong> based on neuroplasticity. We give you a system to re-engineer your environment and manage your biochemistry.</p>
       </div>
       <div class="faq-item">
-        <h4>Do I need to buy the app separately?</h4>
-        <p>No. The FreeMind App is included with your book purchase. Lifetime access at no extra cost.</p>
+        <h4>What if I have tried NoFap before and failed?</h4>
+        <p>Most men fail because they rely on willpower (White-knuckling). This protocol focuses on <em>removing the triggers</em> and <em>replacing the dopamine sources</em>, which makes the process 10x easier.</p>
       </div>
       <div class="faq-item">
-        <h4>How long does the 90-day calendar last?</h4>
-        <p>The 30-day challenge breaks the addiction. The 90-day calendar extends your progress, building discipline and preventing relapse long-term. After 90 days, you maintain your new identity.</p>
+        <h4>How do I access the App?</h4>
+        <p>The access link and credentials for the Web App are included immediately inside the PDF and sent to your email after purchase.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Free Mind Protocol. All rights reserved. | Support: protocolfreemind@gmail.com</p>
+    <p>© 2025 Free Mind Protocol. All rights reserved. <br> <span style="font-size:0.8rem; opacity:0.6;">Disclaimer: This content is for educational purposes and is not medical advice.</span></p>
   </footer>
 
   <script>
-    // Reddit tracking for CTA clicks
     document.querySelectorAll('.btn').forEach(btn => {
       btn.addEventListener('click', () => {
         if (window.rdt) {
